@@ -10,9 +10,9 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/chndel-abhishek/Notejam-Jenkins.git']]])
                 script { 
-                    sh """pip install pipenv
+                    sh """pipenv install
                     pipenv run pip install bridgecrew
-                    pipenv run bridgecrew --directory . --bc-api-key 0eae2fff-00a2-46e6-8cff-8fc1a1522150 --repo-id chndel-abhishek/Notejam-Jenkins"""
+                    pipenv run bridgecrew --directory . --bc-api-key 8baca0d4-422d-46d8-adca-5564629fe581 --repo-id chndel-abhishek/Notejam-Jenkins"""
                 }
             }
         }
